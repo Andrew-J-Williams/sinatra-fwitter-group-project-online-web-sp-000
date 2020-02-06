@@ -2,6 +2,8 @@ class TweetsController < ApplicationController
 
   get '/tweets/:id' do
 
+  end
+
 
   get '/tweets' do
     if logged_in?
