@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    user = Helpers.current_user(session)
+    user = current_user
     if params["content"].empty?
       flash[:empty_tweet] = "Please enter content for your tweet"
       redirect to '/tweets/new'
