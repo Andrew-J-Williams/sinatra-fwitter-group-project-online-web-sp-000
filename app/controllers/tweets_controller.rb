@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
   post '/tweets' do
     user = current_user
     if params["content"].empty?
-      flash[:empty_tweet] = "Please enter content for your tweet"
+      "Please enter content for your tweet"
       redirect to '/tweets/new'
     end
     tweet = Tweet.create(:content => params["content"], :user_id => user.id)
