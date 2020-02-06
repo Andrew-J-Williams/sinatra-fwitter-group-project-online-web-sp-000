@@ -39,11 +39,11 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id/edit' do
-    if logged_in? 
+    if logged_in?
             @tweet = Tweet.find_by(params[:id])
             if @tweet && @tweet.user == current_user
                 erb :'/tweets/edit'
-            else 
+            else
                 redirect to '/tweets'
             end
         else redirect to '/login'
