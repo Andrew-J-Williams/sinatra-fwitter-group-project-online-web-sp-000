@@ -56,7 +56,7 @@ class TweetsController < ApplicationController
       tweet.update(:content => params["content"])
       tweet.save
 
-    redirect to "/tweets/#{tweet.id}"
+      redirect to "/tweets/#{tweet.id}"
   end
 
 end
