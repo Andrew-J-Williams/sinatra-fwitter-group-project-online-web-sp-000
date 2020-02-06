@@ -18,20 +18,14 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    if logged_in?
-      if params[:content] == nil
-        redirect to "/tweets/new"
-      else
-        @tweet = current_user.tweets.build(content: params[:content])
-          if @tweet.save
-            redirect to "/tweets/#{@tweet.id}"
-          else
-              redirect to "/tweets/new"
-          end
-      end
-    else
-      redirect to '/login'
+    user = Helpers.current_user(session)
+    if params["content"].empty?
+      flash[:empty_tweet] = "Please enter content for your tweet"
+      redirect to '/tweets/new'
     end
+    tweet = Tweet.create(:content => params["content"], :user_id => user.id)
+
+    redirect to '/tweets'
   end
 
 
