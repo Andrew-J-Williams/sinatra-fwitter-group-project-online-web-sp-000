@@ -1,5 +1,8 @@
 class TweetsController < ApplicationController
 
+  get '/tweets/:id'
+
+
   get '/tweets' do
     if logged_in?
         @tweets = Tweet.all
