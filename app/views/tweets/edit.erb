@@ -1,4 +1,4 @@
-<form method="POST" action="/tweets/<%= @tweet.id %>">
+<form method="post" action="/tweets/<%= @tweet.id %>">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <label>Content:</label><br>
   <input type="text" name="content" id="content" value="<%= @tweet.content %>"><br><br>
