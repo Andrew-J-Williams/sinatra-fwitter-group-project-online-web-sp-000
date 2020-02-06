@@ -20,6 +20,7 @@ class TweetsController < ApplicationController
   post '/tweets' do
     tweet = Tweet.new(params[:content])
     @tweets = Tweet.all
+    @tweets << tweet
 
   end
 
