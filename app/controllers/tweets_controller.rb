@@ -50,7 +50,7 @@ class TweetsController < ApplicationController
   patch '/tweets/:id' do
     tweet = Tweet.find(params[:id])
     if params["content"].empty?
-      flash[:empty_tweet] = "Please enter content for your tweet"
+      "Please enter content for your tweet"
       redirect to "/tweets/#{params[:id]}/edit"
     end
     tweet.update(:content => params["content"])
