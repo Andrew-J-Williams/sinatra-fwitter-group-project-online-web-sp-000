@@ -48,6 +48,7 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id' do
+    user = current_user
     tweet = Tweet.find(params[:id])
     if params["content"].empty?
       "Please enter content for your tweet"
