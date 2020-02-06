@@ -53,8 +53,8 @@ class TweetsController < ApplicationController
       "Please enter content for your tweet"
       redirect to "/tweets/#{params[:id]}/edit"
     end
-    tweet.update(:content => params["content"])
-    tweet.save
+      tweet.update(:content => params["content"])
+      tweet.save
 
     redirect to "/tweets/#{tweet.id}"
   end
