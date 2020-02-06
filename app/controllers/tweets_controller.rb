@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    user = current_user
+    user = current_user #Sets variable equal to the user's session
     if params["content"].empty?
       "Please enter content for your tweet"
       redirect to '/tweets/new'
