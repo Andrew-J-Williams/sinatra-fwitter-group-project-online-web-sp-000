@@ -18,5 +18,9 @@ class TweetsController < ApplicationController
     end
   end
 
+  post '/tweets' do
+    
+  end
+
 
 end
