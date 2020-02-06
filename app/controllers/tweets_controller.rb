@@ -21,7 +21,7 @@ class TweetsController < ApplicationController
     user = current_user #Sets variable equal to the user's session
     if params["content"].empty? #Checks to see if the user has written a blank tweet
       "Please enter content for your tweet"
-      redirect to '/tweets/new'
+      redirect to '/tweets/new' #
     end
     tweet = Tweet.create(:content => params["content"], :user_id => user.id)
 
