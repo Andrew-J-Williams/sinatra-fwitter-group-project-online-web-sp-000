@@ -18,8 +18,9 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    @tweet = Tweet.new(params[:content])
-    
+    tweet = Tweet.new(params[:content])
+    @tweets = Tweet.all
+
   end
 
 
