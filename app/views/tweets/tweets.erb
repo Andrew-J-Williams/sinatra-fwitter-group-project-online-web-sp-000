@@ -5,6 +5,9 @@
 <h2>Tweets:</h2>
 
 <% if @tweets.empty? %>
-<% @tweets.each do |tweet| %>
-    <%= tweet.content %>
+  <%= Nothing to see here! %>
+<% else %>
+  <% @tweets.each do |tweet| %>
+      <%= tweet.content %>
+  <% end %>
 <% end %>
