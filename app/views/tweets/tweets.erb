@@ -8,7 +8,7 @@
   <%="Sweet Nothingness..."%>
 <% else %>
   <% @tweets.each do |tweet| %>
-      <%= tweet.content %><br>
+      <a href="/tweets/show"><%=tweet.content%><br>
   <% end %>
 <% end %>
 
