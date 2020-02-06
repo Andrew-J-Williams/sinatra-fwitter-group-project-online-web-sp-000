@@ -5,7 +5,7 @@
 <h2>Tweets:</h2>
 
 <% if @tweets.empty? %>
-  <%= Nothing to see here! %>
+  <%="Nothing to see here!"%>
 <% else %>
   <% @tweets.each do |tweet| %>
       <%= tweet.content %>
