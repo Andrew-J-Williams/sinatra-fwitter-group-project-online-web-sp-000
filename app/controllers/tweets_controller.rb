@@ -23,8 +23,8 @@ class TweetsController < ApplicationController
       "Please enter content for your tweet"
       redirect to '/tweets/new' #Send the user back to the create screen if tweet is blank
     else
-    tweet = Tweet.create(:content => params["content"], :user_id => user.id)
-  end
+      tweet = Tweet.create(:content => params["content"], :user_id => user.id)
+    end
 
     redirect to '/tweets'
   end
