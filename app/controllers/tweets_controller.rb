@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   get '/tweets/:id' do
-
+    
   end
 
 
