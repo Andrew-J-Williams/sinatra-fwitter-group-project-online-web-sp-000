@@ -65,6 +65,7 @@ class TweetsController < ApplicationController
           end
         else
           redirect to '/login'
+        end
   end
 
 end
