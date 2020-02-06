@@ -3,6 +3,8 @@
 <br><br>
 
 <h2>Tweets:</h2>
+
+<% if @tweets.empty? %>
 <% @tweets.each do |tweet| %>
     <%= tweet.content %>
 <% end %>
